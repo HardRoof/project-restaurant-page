@@ -10,10 +10,10 @@ import chairsImport from './img/chairs.jpeg'
 function homepage() {
   // <-------> //
   const container = document.createElement('div');
-  container.classList.add('containerClass'); 
 
   const topSection = document.createElement('section');
   container.append(topSection);
+  topSection.classList.add('containerClass'); 
 
   // <-------> //
   topSection.append(header());
