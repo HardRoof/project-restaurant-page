@@ -11,7 +11,8 @@ function menu() {
 
   const menuTitle = document.createElement('div');
   mainMenu.append(menuTitle);
-  menuTitle.id = "divTitle"
+  menuTitle.classList.add('divTitle', 'title');
+  // menuTitle.id = "divTitle"
   const title = document.createElement('h1');
   menuTitle.append(title);
   title.textContent = "OUR MENU"
@@ -20,6 +21,7 @@ function menu() {
 
   const gridMenu = document.createElement('div');
   mainMenu.append(gridMenu);
+  gridMenu.id = "gridMenuID"
 
   const espressoMenu = document.createElement('div');
   gridMenu.append(espressoMenu);

@@ -61,7 +61,7 @@ function menu() {
   inputArray[2].max = "8";
 
   inputArray[3].setAttribute('type', "email");
-  inputArray[3].placeholder = "Enter your email"
+  inputArray[3].placeholder = "EMAIL ADDRESS"
 
   const btn = document.createElement("button"); 
   main.append(btn);
@@ -72,7 +72,3 @@ function menu() {
 }
 
 export default menu;
-
-{/* <form action="" method="post" id="submitForm" class="formClass">
-  <label for="titleX">Title</label>
-  <input type="text" id="titleX" required> */}
