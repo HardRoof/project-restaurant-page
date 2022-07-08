@@ -4,6 +4,7 @@
   font-size: 62.5%; /* To turn 1rem into 10px */
   --green-color: rgb(0 102 70);
   --gray-color-text: rgb(116 118 116);
+  --shadow: 1px 2px 4px rgb(0 0 0 / 51%)
 }
 
 * {
@@ -435,19 +436,86 @@ input:valid+span:after {
 
 
 /* About section */
+#aboutContainer {
+  background-color: rgb(82 97 76);
+  ;
+}
+
 .containerClass.about {
   background-image: url(img/kevin-butz-BBFRIGifYQ8-unsplash.jpeg);
-  min-height: 70vh;
+  min-height: 80vh;
   background-position: center;
+  box-shadow: var(--shadow);
+}
+
+.outer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(32rem,1fr));
+  gap: 8rem;
+  max-width: 119rem;
+  padding: 10rem 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.outer img {
+  height: 43vmin;
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.text {
+  font-size: 2rem;
+}
+
+.text h2 {
+  margin-top: 0;
+  text-shadow: var(--shadow);
+}
+
+.contactContainer {
+  padding: 8rem 4rem;
+  color: var(--green-color);
+  background-image: linear-gradient(rgb(255 255 255 / 90%), rgb(255 255 255));
+  white-space: pre-line;
+  display: flex;
+  gap: 1px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contactContainer div p:nth-child(3){
+  margin: 1rem 0;
 }
 
 #news {
+  display: grid;
+  row-gap: 1rem;
+}
+
+#news div {
   display: flex;
+  flex-wrap: wrap;
+}
+
+#news label{
+font-size: 2rem;
+}
+
+#inputNewsId {
+  border: solid var(--green-color);
 }
 
 form button {
+  border-radius: 0 5px 5px 0;
+  margin-left: -1px;
   background-color: var(--green-color);
   color: #fff;
   border: none;
   transition: all .3s;
+  font-size: calc(0.7vw + 0.7rem);
+  min-height: 3rem;
 }
