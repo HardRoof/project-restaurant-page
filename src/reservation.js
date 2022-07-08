@@ -61,7 +61,7 @@ function menu() {
   inputArray[2].max = "8";
 
   inputArray[3].setAttribute('type', "email");
-  inputArray[3].placeholder = "EMAIL ADDRESS"
+  inputArray[3].placeholder = "Email Address"
 
   const btn = document.createElement("button"); 
   main.append(btn);
