@@ -17,6 +17,7 @@ function header() {
   for (let i = 0; i < listArray.length; i++) {
     let listItem = document.createElement('li');
     list.append(listItem);
+    listItem.classList.add("listClass", `listClass${listArray[i]}`); 
     listItem.textContent = listArray[i];
   }
 return header
