@@ -4,28 +4,61 @@
   font-size: 62.5%; /* To turn 1rem into 10px */
   --green-color: rgb(0 102 70);
   --gray-color-text: rgb(116 118 116);
-  --shadow: 1px 2px 4px rgb(0 0 0 / 51%)
+  --shadow: 1px 2px 4px rgb(0 0 0 / 51%);
 }
 
 * {
   box-sizing: border-box;
 }
 
-p{
+p {
   margin: 0;
 }
 
 body {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 1.6rem; /* To turn 1rem into 10px */
   color: white;
 }
 
 
-/* Homepage Section */
-#content {
-  height: 100vh;
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+#logoID {
+  height: 15vmin;
+  min-height: 5rem;
+  border-radius: 50%;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: calc(1.1vw + 0.6rem);
+  padding-inline-start: 2rem;
+}
+
+li {
+  font-size: calc(0.8vw + 1rem);
+  cursor: pointer;
+  text-transform: uppercase;
+  opacity: 0.95;
+  transition: all 0.15s;
+}
+
+li:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+  opacity: 1;
+  text-underline-offset: 4px;
+}
+
+
+/* Homepage Section */
 section, .containerClass.about {
   display: grid;
   grid-template-rows: min-content auto;
@@ -40,31 +73,6 @@ section, .containerClass.about {
   padding: 4rem;
 }
 
-#logoID {
-  height: 15vmin;
-  min-height: 5rem;
-  border-radius: 50%;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-ul {
-  list-style: none;
-  display: flex;
-  gap: calc(1.1vw + 0.5rem);
-  padding-inline-start: 2rem;
-}
-
-li {
-  font-size: calc(0.8vw + 1rem);
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
 section h1, .about h1{
   align-self: center;
   font-size: 3.5rem;
@@ -74,7 +82,6 @@ section h1, .about h1{
   color: var(--green-color);
   display: grid;
   grid-template-columns: repeat(3, min-content);
-  /* grid-template-rows: repeat(4, auto); */
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -153,15 +160,16 @@ section h1, .about h1{
   align-self: flex-start;
   border-radius: 12rem;
   cursor: pointer;
-  color: var(--green-color);
+  color: rgb(7 109 77);
   border: solid 4px;
-  border-color: var(--green-color);
+  border-color: rgb(7 109 77);
   white-space: nowrap;
-  background-color: rgb(0 0 0 / 50%);
+  background-color: rgb(255 255 255 / 3%);
   padding: 8px 24px;
   font-size: 2rem;
   position: absolute;
   bottom: 4rem;
+  text-transform: capitalize;
 }
 
 #menuDiv button:hover, #aboutReservation button:hover {
@@ -170,29 +178,6 @@ section h1, .about h1{
   border-color: var(--green-color);
   transform: scale(1.05);
   box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px -3px, rgb(0 0 0 / 5%) 0px 4px 6px -2px;
-}
-
-#gif {
-  position: relative;
-}
-
-video {
-  height: 50vmin;
-  width: 100vw;
-  max-width: 100%; /*The horizontal overflow is present because of the vertical scroll */
-  object-fit: cover;
-  display: block; /* to remove bottom margin */
-}
-
-#github, #instagram {
-  height: 5.5rem;
-  width: 5.5rem;
-  filter: brightness(0.8);
-  cursor: pointer;
-}
-
-#github:hover, #instagram:hover {
-  filter: brightness(1);
 }
 
 #reservation {
@@ -232,6 +217,29 @@ video {
   background-color: transparent;
 }
 
+#gif {
+  position: relative;
+}
+
+video {
+  height: 50vmin;
+  width: 100vw;
+  max-width: 100%; /*The horizontal overflow is present because of the vertical scroll */
+  object-fit: cover;
+  display: block; /* to remove bottom margin */
+}
+
+#github, #instagram {
+  height: 5.5rem;
+  width: 5.5rem;
+  filter: brightness(0.8);
+  cursor: pointer;
+}
+
+#github:hover, #instagram:hover {
+  filter: brightness(1);
+}
+
 #footInfo {
   display: grid;
   grid-template-columns: repeat(2,max-content);
@@ -254,14 +262,30 @@ video {
   grid-area: 3/1/4/3;
 }
 
+
 /* Menu section */
+.containerClass.menu {
+  display: block;
+}
+
 main div{
   display: grid;
   gap: 0.5rem 2rem;
 }
 
-.containerClass.menu {
-  display: block;
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title h1 {
+  margin: 6rem 0 0;
+}
+
+.title span {
+  border: solid 1px;
+  width: 40%;
 }
 
 #gridMenuID {
@@ -320,20 +344,6 @@ main div{
   text-align: end;
 }
 
-.title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.title h1 {
-  margin: 6rem 0 0;
-}
-
-.title span {
-  border: solid 1px;
-  width: 40%;
-}
 
 /* Reservation Section */
 .containerClass.reservation {
@@ -430,7 +440,7 @@ input:valid+span:after {
   border-color:#FFFFFF;
 }
 
-.reservation main button:active {
+.reservation main button:active, li:active {
   transform: scale(.96);
 }
 
@@ -438,7 +448,6 @@ input:valid+span:after {
 /* About section */
 #aboutContainer {
   background-color: rgb(82 97 76);
-  ;
 }
 
 .containerClass.about {
@@ -519,3 +528,4 @@ form button {
   font-size: calc(0.7vw + 0.7rem);
   min-height: 3rem;
 }
+
