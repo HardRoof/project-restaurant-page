@@ -6,13 +6,13 @@ function menu() {
 
   container.append(header());
 
+  // <-------> //
   const main = document.createElement('main');
   container.append(main);
 
   const divReservationTitle = document.createElement('div');
   main.append(divReservationTitle);
   divReservationTitle.classList.add('divReservationTitle', 'title');
-  // divReservationTitle.id = "divReservationTitle"
   
   const titleReservation = document.createElement('h1');
   divReservationTitle.append(titleReservation);
@@ -20,12 +20,12 @@ function menu() {
   const line = document.createElement('span');
   divReservationTitle.append(line);
 
-
+  // <-------> //
   const form = document.createElement('form');
   main.appendChild(form);
   form.id = "formID"
   form.setAttribute('method', "post");
-  // form.setAttribute('action', "submit.php");
+  // form.setAttribute('action', "");
 
   let inputArray = []
   let labelArray = ["Date", "Time", "Guests", ""]
@@ -63,6 +63,7 @@ function menu() {
   inputArray[3].setAttribute('type', "email");
   inputArray[3].placeholder = "Email Address"
 
+  // <-------> //
   const btn = document.createElement("button"); 
   main.append(btn);
   btn.setAttribute('form', "formID");

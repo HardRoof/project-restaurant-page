@@ -6,19 +6,20 @@ function menu() {
 
   container.append(header());
 
+  // <-------> //
   const mainMenu = document.createElement('main');
   container.append(mainMenu);
 
   const menuTitle = document.createElement('div');
   mainMenu.append(menuTitle);
   menuTitle.classList.add('divTitle', 'title');
-  // menuTitle.id = "divTitle"
   const title = document.createElement('h1');
   menuTitle.append(title);
   title.textContent = "OUR MENU"
   const line = document.createElement('span');
   menuTitle.append(line);
 
+  // <-------> //
   const gridMenu = document.createElement('div');
   mainMenu.append(gridMenu);
   gridMenu.id = "gridMenuID"
@@ -102,7 +103,6 @@ function menu() {
       item.classList.add('price')
       }
   });
-
 
   return container
 }
