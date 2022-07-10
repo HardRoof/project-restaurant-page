@@ -47,12 +47,14 @@ function about() {
   OurContainer.append(companyPic);
   companyPic.src = companyPicImport;
   companyPic.alt = 'Store Picture';
+  companyPic.setAttribute('loading', "lazy");
 
 // <----------> //
   const coffeePic = document.createElement('img');
   OurContainer.append(coffeePic);
   coffeePic.src = coffeePicImport;
   coffeePic.alt = 'Store Picture';
+  coffeePic.setAttribute('loading', "lazy");
 
   const OurCoffeeTextDiv = document.createElement('div');
   OurContainer.append(OurCoffeeTextDiv);
@@ -66,7 +68,7 @@ function about() {
   OurCoffeeTextDiv.append(coffeeParagraph);
   coffeeParagraph.textContent = "It takes many hands to craft the perfect cup of coffee – from the farmers who tend to the red-ripe coffee cherries, to the barista who serves it with care. We are committed to the highest standards of quality and service, creating tasteful experiences to our clients.";
 
-   // <-------> //
+  // <-------> //
   const contactContainer = document.createElement('div');
   bottomContent.append(contactContainer);
   contactContainer.classList.add('contactContainer'); 
@@ -91,7 +93,6 @@ function about() {
   contactBox.append(companyEmail);
   companyEmail.textContent = "323-5555555 \r\n dumbstarbucks@zmail.com";
 
-
   // <-------> //
   const form = document.createElement('form');
   contactContainer.appendChild(form);
@@ -113,6 +114,7 @@ function about() {
   input.classList.add('inputClass'); 
   input.setAttribute('type', "email");
   input.placeholder = "Email Address"
+  input.required = true;
 
   label.textContent = "Get News & Offers";
 
