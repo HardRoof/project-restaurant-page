@@ -122,6 +122,13 @@ function about() {
   inputBox.append(btn);
   btn.innerText = "JOIN →";
 
+  //To prevent form submission and reloads webpage
+  form.addEventListener("submit", (e)=>{
+    e.preventDefault()
+    window.location.reload();
+    window.scrollTo(0, 0);  //To refresh at top of Page
+  })
+
 
   return container
 }

@@ -69,6 +69,13 @@ function menu() {
   btn.setAttribute('form', "formID");
   btn.innerText = "Check Availability";
 
+  //To prevent form submission and reloads webpage
+  form.addEventListener("submit", (e)=>{
+    e.preventDefault()
+    window.location.reload();
+    window.scrollTo(0, 0);  //To refresh at top of Page
+  })
+
   return container
 }
 
