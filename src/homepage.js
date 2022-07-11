@@ -127,11 +127,14 @@ function homepage() {
   github.src = githubImport;
   github.alt = 'Github';
   github.id = 'github'
+  github.setAttribute("onclick", "window.open('https://github.com/HardRoof', '_blank')");
+
   const insta = document.createElement('img');
   footInfo.append(insta);
   insta.src = instaImport;
   insta.alt = 'Instagram';
   insta.id = "instagram"
+  insta.setAttribute("onclick", "window.scrollTo(0, 0);");
 
   const horizontal = document.createElement('div')
   footInfo.append(horizontal)

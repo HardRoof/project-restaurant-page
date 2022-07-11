@@ -18,7 +18,7 @@ function events() {
 
   if (onFirstPage == true) {
   document.querySelector('#menuButton').addEventListener('click', loadMenu);
-  document.querySelector('#aboutReservation button').addEventListener('click', loadMenu);
+  document.querySelector('#aboutReservation button').addEventListener('click', loadReservation);
   }
 
   function loadHome() {
