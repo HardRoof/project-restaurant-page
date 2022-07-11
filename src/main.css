@@ -382,7 +382,7 @@ main div{
 }
 
 label, input{
-  font-size: calc(1vw + 0.7rem);
+  font-size: calc(1vw + 0.6rem);
 }
 
 #input0 {
