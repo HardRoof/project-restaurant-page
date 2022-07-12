@@ -6,7 +6,7 @@ https://user-images.githubusercontent.com/92646158/178569304-c266b131-e649-4025-
 <br/>
 
 ## About the project
-A single page static coffee shop website created using JavaScript to generate the entire contents of the page and Webpack to bundle files. Additional features as time goes on may be added.
+A single page static website created using JavaScript to generate the entire contents of the page and Webpack to bundle files. Additional features as time goes on may be added.
 <br/><br/>
 
 ## Technologies used
